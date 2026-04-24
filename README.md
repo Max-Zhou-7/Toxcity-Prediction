@@ -80,7 +80,7 @@ Total runtime: ~1–2 hours on a T4 GPU, dominated by ChemBERTa fine-tuning.
 | MPNN         | Molecular graph (8 atom + 4 bond features) | PyTorch Geometric |
 | ChemBERTa    | SMILES tokens              | HuggingFace       |
 
-**DNN**: 3 hidden layers `[512, 256, 128]` with BatchNorm, ReLU, dropout p=0.5. Adam (lr=1e-3, weight_decay=1e-3), ReduceLROnPlateau scheduler, early stopping (patience=20).
+**DNN**: 3 hidden layers `[1024, 512, 256, 128]` with BatchNorm, ReLU, dropout p=0.5. Adam (lr=1e-3, weight_decay=1e-3), ReduceLROnPlateau scheduler, early stopping (patience=20).
 
 **MPNN**: 3 NNConv layers with edge-conditioned message passing, concatenated mean+max global pooling, 3-layer MLP head. Adam (lr=1e-3, weight_decay=1e-4).
 
